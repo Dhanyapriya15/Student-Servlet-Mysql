@@ -1,0 +1,29 @@
+ CREATE DATABASE userdb;
+USE userdb;
+ CREATE TABLE students (
+    ->     student_id INT PRIMARY KEY,
+    ->     name VARCHAR(100) NOT NULL,
+    ->     department VARCHAR(50) NOT NULL,
+    ->     cgpa DECIMAL(3,2) NOT NULL
+    -> );
+
+ INSERT INTO students (student_id, name, department, cgpa) VALUES
+    -> (101, 'Alice Johnson', 'Computer Science', 9.1),
+    -> (102, 'Bob Smith', 'Mechanical Engineering', 8.5),
+    -> (103, 'Charlie Brown', 'Electrical Engineering', 8.9),
+    -> (104, 'David Wilson', 'Civil Engineering', 8.2),
+    -> (105, 'Emma Davis', 'Information Technology', 9.3);
+ 5 rows affected (0.01 sec)
+
+
+ SELECT * FROM students;
++------------+---------------+------------------------+------+
+| student_id | name          | department             | cgpa |
++------------+---------------+------------------------+------+
+|        101 | Alice Johnson | Computer Science       | 9.10 |
+|        102 | Bob Smith     | Mechanical Engineering | 8.50 |
+|        103 | Charlie Brown | Electrical Engineering | 8.90 |
+|        104 | David Wilson  | Civil Engineering      | 8.20 |
+|        105 | Emma Davis    | Information Technology | 9.30 |
++------------+---------------+------------------------+------+
+5 rows in set (0.00 sec)
